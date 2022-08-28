@@ -1,4 +1,4 @@
-"""EX 01 - Chardle - Input, Variables, and Conditionals"""
+"""EX 01 - Chardle - Input, Variables, and Conditionals."""
 
 __author__ = "730573834"
 
@@ -35,6 +35,6 @@ if (prompt_char == prompt_word[4]):
 if (char_count == 0):
     print("No instances of " + prompt_char + " found in " + prompt_word)
 if (char_count == 1):
-    print(str(char_count) + "instance of " + prompt_char + " found in " + prompt_word)
+    print(str(char_count) + " instance of " + prompt_char + " found in " + prompt_word)
 if (char_count > 1):
     print(str(char_count) + " instances of " + prompt_char + " found in " + prompt_word)
