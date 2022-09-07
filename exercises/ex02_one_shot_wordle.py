@@ -1,4 +1,4 @@
-"""EX02 - This is the one shot wordle assignment!"""
+"""EX02 - This is the one shot wordle assignment."""
 
 __author__ = "730573834"
 
