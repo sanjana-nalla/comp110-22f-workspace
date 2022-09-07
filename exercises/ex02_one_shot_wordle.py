@@ -22,12 +22,12 @@ while(guess < len(secret_word)):
     else: 
         var_bool: bool = False
         guess2: int = 0
-        while(var_bool == (not False) and guess2 < len(secret_word)):
+        while(var_bool is not False and guess2 < len(secret_word)):
             if (prompt_word[guess] == secret_word[guess2]):
                 var_bool = True
             else:
                 guess2 += 1
-        if (var_bool == True):
+        if (var_bool is True):
             emoji_boxes += YELLOW_BOX
         else:
             emoji_boxes += WHITE_BOX
