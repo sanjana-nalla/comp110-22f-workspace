@@ -14,7 +14,7 @@ guess: int = 0
 emoji_boxes: str = ""
 
 while(len(prompt_word) != 6):
-    prompt_word: str = input("That was not 6 letters! Try again: ") 
+    prompt_word = input("That was not 6 letters! Try again: ") 
 
 while(guess < len(secret_word)):
     if (prompt_word[guess] == secret_word[guess]):
@@ -22,7 +22,7 @@ while(guess < len(secret_word)):
     else: 
         var_bool: bool = False
         guess2: int = 0
-        while(var_bool == False and guess2 < len(secret_word)):
+        while(var_bool == (not False) and guess2 < len(secret_word)):
             if (prompt_word[guess] == secret_word[guess2]):
                 var_bool = True
             else:
