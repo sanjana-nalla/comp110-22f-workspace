@@ -26,12 +26,12 @@ def emojified (prompt_word: str, secret_word: str) -> str:
     while (guess < len(secret_word)):
         if (prompt_word[guess] == secret_word[guess]):
             emoji_boxes += GREEN_BOX
-        elif (contains_char is True):
+        elif (contains_char(secret_word, prompt_word[guess]) is True):
             emoji_boxes += YELLOW_BOX
         else:
             emoji_boxes += WHITE_BOX
         guess += 1
-        
+
     return emoji_boxes
 
 def input_guess (word_num_letter: int) -> str:
@@ -42,6 +42,13 @@ def input_guess (word_num_letter: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
+    secret_word: str = "codes"
+    turns: int = 0
+    while (turns <= 6):
+        print(f"=== Turn {turns}/6 ===")
+
+
+
 
 
 
