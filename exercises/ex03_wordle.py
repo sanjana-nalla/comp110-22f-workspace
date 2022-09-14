@@ -8,7 +8,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 
 def contains_char(given_str: str, search_char: str) -> bool:
-    """This function iterates through the string, given_str, as it checks to see if each letter of string is equal to the comparison character, search_char. """
+    """This function iterates through the string, given_str, as it checks to see if each letter of string is equal to the comparison character, search_char."""
     assert len(search_char) == 1
     while (given_str > ""):
         if (given_str[0] == search_char):
@@ -43,7 +43,7 @@ def emojified(prompt_word: str, secret_word: str) -> str:
 
 def input_guess(word_num_letter: int) -> str:
     """In the function, input_guess, the user is asked for input.
-    
+
     Based on the number of letters in the word defined in the main function when ran the 
     function will check to see if the user answered with a word that 
     was of the appropriate length using the len() function. 
