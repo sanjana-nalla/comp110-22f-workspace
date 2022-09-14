@@ -18,11 +18,12 @@ def contains_char(given_str: str, search_char: str) -> bool:
     return False
 
 
-
 def emojified(prompt_word: str, secret_word: str) -> str:
-    """The function emojified compares the two strings, prompt_word (which is what the user gives) and secret_word (which is defined by the user). 
+    """The function emojified compares the two strings, prompt_word (which is what the user gives) and secret_word (which is defined by the user).
+
     Like wordle, the function outputs a white emoji box when a letter doesnt occur in secret_word at all, a yellow emoji box is outputed when a letter occurs in secret_word but in a different place,
-    and a green emoji box when a letter occurs in secret_word and is in the correct spot"""
+    and a green emoji box when a letter occurs in secret_word and is in the correct spot
+    """
     assert len(prompt_word) == len(secret_word)
     
     guess: int = 0
@@ -41,9 +42,13 @@ def emojified(prompt_word: str, secret_word: str) -> str:
 
 
 def input_guess(word_num_letter: int) -> str:
-    """In the function, input_guess, the user is asked for input and based on the number of letters in the word defined in the main function
-    when ran the function will check to see if the user answered with a word that was of the appropriate length using the len() function. 
-    The function returns the user input."""
+    """In the function, input_guess, the user is asked for input.
+    
+    Based on the number of letters in the word defined in the main function when ran the 
+    function will check to see if the user answered with a word that 
+    was of the appropriate length using the len() function. 
+    The function returns the user input.
+    """
     prompt_word = input(f"Enter a {word_num_letter} character word: ")
     while (len(prompt_word) != word_num_letter):
         prompt_word = input(f"That wasn't {word_num_letter} chars! Try again: ")
