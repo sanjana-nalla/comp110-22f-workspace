@@ -10,7 +10,7 @@ def contains_char(given_str: str, search_char: str) -> bool:
     assert len(search_char) == 1
     """This function iterates through the string, given_str, as it checks to see if each letter of string is equal to the comparison character, search_char. """
     while (given_str > ""):
-        if given_str[0] == search_char:
+        if (given_str[0] == search_char):
             return True
         else:
             given_str = given_str[1:]
@@ -43,12 +43,20 @@ def input_guess (word_num_letter: int) -> str:
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     secret_word: str = "codes"
-    turns: int = 0
-    while (turns <= 6):
+    turns: int = 1
+    correct: bool = False
+    
+    while ((turns <= 6) and (correct is False)):
         print(f"=== Turn {turns}/6 ===")
+        guessed: str = input_guess(len(secret_word))
+        print(emojified(guessed, secret_word))
 
+        if (guessed == secret_word):
+            correct = True
+            print(f"You won in {turns}/6 turns!")
+            quit()
+        turns += 1
 
-
-
-
-
+        if (turns > 6):
+            print("X/6 - Sorry, try again tomorrow!")
+            quit()
