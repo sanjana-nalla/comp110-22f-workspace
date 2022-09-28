@@ -2,6 +2,7 @@
 
 __author__ = "730573834"
 
+
 def all(nums: list[int], given_num: int) -> bool:
     """This function iterates through the list and inspects the list to see if each value of the list is equal to a given number."""
     i: int = 0
@@ -15,6 +16,7 @@ def all(nums: list[int], given_num: int) -> bool:
         i += 1
     return checker_var
 
+
 def max(input: list[int]) -> int:
     """This function compares the values inside the list and returns the maximum number or the highest value in the list while using iteration as well."""
     if (len(input) == 0):
@@ -27,6 +29,7 @@ def max(input: list[int]) -> int:
         i += 1
     return max_val
 
+
 def is_equal(list_one: list[int], list_two: list[int]) -> bool:
     """This function comapres to two lists and inspects as each item of the lists to check if they are equal at each index using iteration again."""
     i: int = 0
@@ -35,7 +38,3 @@ def is_equal(list_one: list[int], list_two: list[int]) -> bool:
             return True
         i += 1
     return False
-
-
-
-
