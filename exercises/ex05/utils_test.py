@@ -1,8 +1,9 @@
-"""EX05 - `list` Utility Function - Function Test"""
+"""EX05 - `list` Utility Function - Function Test."""
 
 __author__ = "730573834"
 
 from utils import only_evens, concat, sub
+
 
 def test_only_evens_empty() -> None:
     """Unit test for empty list."""
@@ -38,7 +39,7 @@ def test_concat_both_empty() -> None:
 def test_concat_a_empty() -> None:
     """Unit test for combining one empty list with one list with items."""
     list_a: list[int] = []
-    list_b: list[int] = [1,2,3]
+    list_b: list[int] = [1, 2, 3]
     assert concat(list_a, list_b) == [1, 2, 3]
 
 
@@ -56,10 +57,9 @@ def test_concat_working() -> None:
     assert concat(list_a, list_b) == [1, 2, 3, 4, 5, 6]
 
 
-
 def test_sub_empty() -> None:
     """Unit test for empty list."""
-    list_int: list[int]
+    list_int: list[int] = []
     a: int = 1
     b: int = 3
     assert sub(list_int, a, b) == []
@@ -87,5 +87,3 @@ def test_sub_many() -> None:
     a: int = 1
     b: int = 3
     assert sub(list_int, a, b) == [1, 2]
-
-
