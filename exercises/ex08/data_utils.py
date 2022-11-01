@@ -4,6 +4,8 @@ __author__ = "730573834"
 
 # Define your functions below
 from csv import DictReader
+from turtle import fd
+
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
     """Read the rows of a csv into a 'table'."""
@@ -45,7 +47,48 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
     return result
 
-def head(num:int, input:dict[str, list[str]]) -> dict[str, list[str]]:
-    result: dict[str, list[str]] = []
+
+def head(inputs:dict[str, list[str]], N:int) -> dict[str, list[str]]:
+    """This function takes in a integer and dictionary and returns a new dictionary with ____ ."""
+    output: dict[str, list[str]] = {}
+
+    i: int = 0
+    for column in inputs:
+        values:list[str] = []
+        i = 0
+        while ((i < N) and (i < len(inputs[column]))):
+            values.append(inputs[column][i])
+            i += 1
+        output[column] = values
+
+    return output
     
-    return result
+
+def select(selection: dict[str, list[str]], selected: list[str]) -> dict[str, list[str]]:
+    """This function __."""
+    output: dict[str, list[str]] = {}
+
+    for column in selected:
+        for row in selection[column]:
+            output[column] = selection[column]
+
+    return output
+
+
+def concat(dict_a: dict[str, list[str]], dict_b: dict[str, list[str]]) -> dict[str, list[str]]:
+    """This function ___."""
+    output: dict[str, list[str]] = {}
+
+    for column in dict_a:
+        output[column] = dict_a[column]
+    for column in dict_b:
+        output[column] = dict_b[column]
+
+    return output
+
+
+def count(inputs:list[str]) -> dict[str, int]:
+    """This function ___."""
+    output: dict[str, int] = {}
+
+    return output
